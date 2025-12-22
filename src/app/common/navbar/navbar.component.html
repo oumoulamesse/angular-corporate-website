@@ -1,0 +1,67 @@
+<!-- ***** Header Area Start ***** -->
+<header
+  class="header-area header-sticky"
+  [class.background-header]="isSticky">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+
+          <!-- Logo -->
+          <a routerLink="/" class="logo">
+            <img src="assets/images/logo.png" alt="MagentaTech">
+          </a>
+
+          <!-- Menu -->
+          <ul class="nav" [class.active]="menuOpen">
+
+            <li class="scroll-to-section">
+              <a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a>
+            </li>
+
+            <li class="scroll-to-section">
+              <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a>
+            </li>
+
+            <li class="scroll-to-section">
+              <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+            </li>
+
+            <!-- Pages Dropdown -->
+            <li class="has-sub" [class.open]="pagesOpen">
+              <a href="javascript:void(0)" (click)="togglePages()">Pages</a>
+
+              <ul class="sub-menu">
+                <li><a routerLink="/about-us" (click)="closeMenu()">About Us</a></li>
+                <li><a routerLink="/our-services" (click)="closeMenu()">Our Services</a></li>
+                <li><a routerLink="/contact" (click)="closeMenu()">Contact Us</a></li>
+              </ul>
+            </li>
+
+            <li class="scroll-to-section">
+              <a routerLink="/testimonials" (click)="closeMenu()">Testimonials</a>
+            </li>
+
+            <li>
+              <a routerLink="/contact" class="contact-btn" (click)="closeMenu()">
+                Contact Support
+              </a>
+            </li>
+
+          </ul>
+
+          <!-- Mobile Menu Button -->
+          <a
+            class="menu-trigger"
+            [class.active]="menuOpen"
+            (click)="toggleMenu()">
+            <span>Menu</span>
+          </a>
+
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ***** Header Area End ***** -->

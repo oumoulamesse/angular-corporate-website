@@ -1,0 +1,81 @@
+/* SECTION */
+.testimonials {
+  padding: 120px 0;
+  background-color: #f9f9f9;
+}
+
+.testimonials .section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* SWIPER */
+.testimonial-swiper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 80px; /* espace pour l'image */
+  overflow: visible; 
+}
+
+/* CARD */
+.testimonial-item {
+  background: #ffffff;
+  padding: 50px 60px 90px; /* IMPORTANT */
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* QUOTE ICON */
+.testimonial-item i {
+  font-size: 42px;
+  color: #a855f7; /* magenta */
+  margin-bottom: 25px;
+}
+
+/* TEXT */
+.testimonial-item p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* NAME */
+.testimonial-item h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* ROLE */
+.testimonial-item span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* IMAGE CONTAINER */
+.testimonial-item .right-image {
+  position: absolute;
+  bottom: -45px;              /* SORT DE LA CARD */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* IMAGE */
+.testimonial-item .right-image img {
+  width: 90px;               /* PLUS GRANDE */
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #ffffff; /* effet template */
+}
+
+/* PAGINATION */
+.testimonials .swiper-pagination-bullet {
+  background: #d1d1d1;
+  opacity: 1;
+}
+
+.testimonials .swiper-pagination-bullet-active {
+  background: #a855f7;
+}

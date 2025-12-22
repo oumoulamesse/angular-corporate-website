@@ -1,11 +1,25 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './common/navbar/navbar.component';
+import { FooterComponent } from './common/footer/footer.component';
+import { AboutComponent } from './pages/about/about.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { CtaComponent } from './pages/cta/cta.component';
+import { HeroComponent } from './pages/hero/hero.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PatnersComponent } from './pages/patners/patners.component';
+import { PricingComponent } from './pages/pricing/pricing.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { TestimonialComponent } from './pages/testimonial/testimonial.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, NavbarComponent, FooterComponent,AboutComponent,CtaComponent
+    ,HeroComponent,PatnersComponent,ServicesComponent,TestimonialComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'magentatech';

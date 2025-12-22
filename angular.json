@@ -26,10 +26,16 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+           "styles": [
+                "src/styles.css",
+                "src/assets/css/templatemo-574-mexant.css",
+                "node_modules/swiper/swiper-bundle.min.css"
+          
+               
+              ],
+            "scripts": [
+               
+            ]
           },
           "configurations": {
             "production": {
@@ -92,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

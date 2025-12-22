@@ -1,0 +1,25 @@
+.about-us .section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.about-us .col-lg-8 {
+  display: flex;
+  justify-content: center;
+}
+.about-us .naccs {
+  width: 100%;
+  max-width: 800px;   /* équilibre visuel */
+}
+.about-us .menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.about-us .right-content {
+  text-align: center;
+}
+
+.about-us .right-content .green-button {
+  display: flex;
+  justify-content: center;
+}

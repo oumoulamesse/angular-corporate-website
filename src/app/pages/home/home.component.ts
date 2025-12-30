@@ -1,8 +1,20 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from '../../common/navbar/navbar.component';
+import { FooterComponent } from '../../common/footer/footer.component';
+import { AboutComponent } from '../about/about.component';
+
+import { HeroComponent } from '../hero/hero.component';
+
+import { ServicesComponent } from '../services/services.component';
+import { TestimonialComponent } from '../testimonial/testimonial.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone:true,
+  imports: [ NavbarComponent, FooterComponent,AboutComponent,
+    HeroComponent,ServicesComponent,TestimonialComponent,ContactComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

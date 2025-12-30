@@ -1,25 +1,108 @@
-.about-us .section-heading {
-  text-align: center;
-  margin-bottom: 50px;
+/* ---------------------------------------------
+About Us Style (IMAGE DEBORDANTE)
+--------------------------------------------- */
+
+#about {
+  margin-top: 120px;
 }
-.about-us .col-lg-8 {
-  display: flex;
-  justify-content: center;
+
+.about-us {
+  position: relative; /* 🔥 indispensable */
+  background-image: url('/assets/images/about-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 140px 0 120px 0;
+  overflow: visible; /* 🔥 autorise le débordement */
 }
-.about-us .naccs {
-  width: 100%;
-  max-width: 800px;   /* équilibre visuel */
-}
-.about-us .menu {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-.about-us .right-content {
+
+
+
+/* IMAGE GAUCHE – DEBORDANTE */
+.about-us .left-image {
+  position: absolute;       /* 🔥 clé */
+  left: -120px;             /* débordement horizontal */
+  bottom: 50px;            /* débordement vertical */
+  z-index: 2;
   text-align: center;
 }
 
-.about-us .right-content .green-button {
-  display: flex;
-  justify-content: center;
+.about-us .left-image img {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
 }
+
+/* SERVICES */
+.about-us .services {
+  padding-left: 140px; /* équilibre avec l’image débordante */
+}
+
+.about-us .services .item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.about-us .services .item .icon {
+  flex-shrink: 0;
+  margin-right: 25px;
+}
+
+.about-us .services .item .icon img {
+  max-width: 70px;
+}
+
+/* TEXTE */
+.about-us .services .item .right-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.about-us .services .item .right-text p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+/* SERVICES GRID */
+.about-us .services .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  gap: 30px 40px; /* espace vertical / horizontal */
+  width: 75%;          /* 🔥 3/4 de la largeur */
+  margin-left: auto;
+}
+
+/* On neutralise Bootstrap à l'intérieur */
+.about-us .services .row > div[class^="col-"] {
+  max-width: 100%;
+  padding: 0;
+}
+
+
+/* RESPONSIVE – on annule le débordement sur mobile */
+@media (max-width: 991px) {
+  .about-us .left-image {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 767px) {
+  .about-us .services .row {
+     
+    grid-template-columns: 1fr;
+  }
+}
+
+
+  .about-us .services {
+    padding-left: 0;
+  }
+
+}
+
+
+

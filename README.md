@@ -57,3 +57,46 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+# MagentaTech Website
+
+Corporate website built with Angular.  
+This project is based on a modern UI template and customized for a professional business website.
+
+---
+
+## 🚀 Features
+
+- Responsive layout (desktop, tablet, mobile)
+- Hero section with Swiper slider
+- Testimonials section with Swiper
+- Partners section
+- Clean and modern UI
+- Optimized for deployment
+
+---
+
+## 🛠️ Tech Stack
+
+- Angular
+- TypeScript
+- Bootstrap 5
+- Swiper.js
+- HTML5 / CSS3
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+├── app/
+│   ├── hero/
+│   ├── testimonial/
+│   ├── partners/
+│   └── app.component.*
+├── assets/
+│   ├── images/
+│   └── css/
+└── index.html

@@ -1,0 +1,89 @@
+/* =========================
+HEADER TYPOGRAPHY
+========================= */
+
+.header-area {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* LOGO */
+.header-area .logo img {
+  max-height: 46px;
+}
+
+/* MENU PRINCIPAL */
+.header-area .main-nav .nav > li > a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;          /* 🔥 plus visible */
+  font-weight: 500;
+  color: #FFFFFF;
+  padding: 10px 18px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER & ACTIVE */
+.header-area .main-nav .nav > li > a:hover {
+  color: #d63384; /* magenta */
+}
+
+/* MENU DÉROULANT */
+.header-area .has-sub > a {
+  font-weight: 600;
+}
+
+.header-area .sub-menu {
+  background: #ffffff;
+  padding: 12px 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.header-area .sub-menu li a {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  padding: 10px 20px;
+}
+
+.header-area .sub-menu li a:hover {
+  color: #d63384;
+}
+
+/* BOUTON CONTACT SUPPORT */
+.header-area .contact-btn {
+  background: #d63384;
+  color: #fff !important;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.header-area .contact-btn:hover {
+  background: #b82d6f;
+}
+
+/* HEADER STICKY */
+.header-area.background-header {
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* MOBILE MENU */
+@media (max-width: 991px) {
+  .header-area .main-nav .nav > li > a {
+    font-size: 18px;     /* 🔥 lisible mobile */
+    padding: 14px 0;
+  }
+
+  .header-area .sub-menu li a {
+    font-size: 16px;
+  }
+
+  .header-area .contact-btn {
+    display: inline-block;
+    margin-top: 15px;
+  }
+}

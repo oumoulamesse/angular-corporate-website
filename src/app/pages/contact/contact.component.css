@@ -1,0 +1,50 @@
+.calculator form {
+  max-width: 420px;   /* 👈 largeur visuelle comme le template */
+  margin: 0;
+}
+.calculator input,
+.calculator select {
+  width: 100%;              /* largeur = celle du form, pas de la colonne */
+  height: 56px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 6px;
+  padding: 0 20px;
+  font-size: 15px;
+  color: #ffffff;
+  outline: none;
+}
+.calculator .col-lg-5 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  left: 720px;   /* ➡️ vers la droite */
+  top: -100px;    /* ⬆️ vers le haut */
+}
+
+@media (min-width: 992px) {
+  .calculator .col-lg-5 {
+    padding-left: 40px;
+  }
+}
+.calculator .left-image img {
+  max-height: 380px;   /* 👈 ajuste ici */
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.calculator {
+  position: relative;
+  background-image: url('/assets/images/calculator-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 580px;     /* ✅ au lieu de height */
+  padding: 10px 0;
+}
+
+
+
+
+

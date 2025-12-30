@@ -11,12 +11,12 @@ import { PatnersComponent } from './pages/patners/patners.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { TestimonialComponent } from './pages/testimonial/testimonial.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent,AboutComponent,CtaComponent
-    ,HeroComponent,PatnersComponent,ServicesComponent,TestimonialComponent
+  imports: [RouterOutlet
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

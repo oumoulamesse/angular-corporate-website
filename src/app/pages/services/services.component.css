@@ -20,7 +20,7 @@
 
 .service-item i {
   font-size: 40px;
-  color: #a855f7; /* magenta */
+  color: #FF00FF; /* magenta */
   margin-bottom: 15px;
 }
 
@@ -38,3 +38,14 @@
     grid-template-columns: 1fr; /* mobile */
   }
 }
+
+.service-item ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.service-item ul li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+

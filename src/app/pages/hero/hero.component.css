@@ -1,3 +1,14 @@
+#top .container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media (max-width: 768px) {
+  #top .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .swiper {
   
   width: 100%;
@@ -18,6 +29,7 @@
 }
 
 .header-text {
+  padding-top: 100px;
   color: #fff;
 }
 
@@ -29,4 +41,18 @@
 .header-text p {
   margin-top: 20px;
   max-width: 600px;
+}
+.header-text em {
+  color: #FF00FF; 
+  font-style: normal; /* enlève l’italique si tu veux */
+  font-weight: 600; /* optionnel */
+}
+.header-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
 }

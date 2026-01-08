@@ -1,73 +1,28 @@
-<section class="testimonials" id="testimonials">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-3">
-        <div class="section-heading">
-          <h6>Testimonials</h6>
-          <h4>What They Say</h4>
-        </div>
-      </div>
-
-      <div class="col-lg-10 offset-lg-1">
-
-        <!-- SWIPER -->
-        <div class="swiper testimonial-swiper">
-          <div class="swiper-wrapper">
-
-            <!-- SLIDE 1 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <i class="fa fa-quote-left"></i>
-                <p>
-                  “Donec et nunc massa. Nullam non felis dignissim,
-                  dapibus turpis semper, vulputate lorem.”
-                </p>
-                <h4>David Eigenberg</h4>
-                <span>CEO of Mexant</span>
-                <div class="right-image">
-                  <img src="assets/images/testimonials-01.jpg" alt="">
-                </div>
-              </div>
-            </div>
-
-            <!-- SLIDE 2 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <i class="fa fa-quote-left"></i>
-                <p>
-                  “Donec et nunc massa. Nullam non felis dignissim,
-                  dapibus turpis semper, vulputate lorem.”
-                </p>
-                <h4>oumou Eigenberg</h4>
-                <span>CEO of Mexant</span>
-                <div class="right-image">
-                  <img src="assets/images/testimonials-01.jpg" alt="">
-                </div>
-              </div>
-            </div>
-
-            <!-- SLIDE 3 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <i class="fa fa-quote-left"></i>
-                <p>
-                  “Ut dictum vehicula massa, ac pharetra leo tincidunt eu.”
-                </p>
-                <h4>George Lopez</h4>
-                <span>Crypto Manager</span>
-                <div class="right-image">
-                  <img src="assets/images/testimonials-01.jpg" alt="">
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- pagination -->
-          <div class="swiper-pagination"></div>
+<main>
+  <div class="slider-wrapper">
+    <ul class="slider" #slider>
+      <li
+        class="item"
+        *ngFor="let t of testimonials; let i = index"
+        [class.animation]="activeIndex === i"
+      >
+        <div class="testimonial">
+          <p>{{ t.quote }}</p>
+          <p>{{ t.name }}</p>
+          <p>{{ t.role }}</p>
         </div>
 
-      </div>
-    </div>
+        <img class="image" [src]="t.image" />
+      </li>
+    </ul>
   </div>
-</section>
+
+  <nav>
+    <button
+      class="btn"
+      *ngFor="let _ of testimonials; let i = index"
+      [class.expand]="activeIndex === i"
+      (click)="scrollTo(i)"
+    ></button>
+  </nav>
+</main>

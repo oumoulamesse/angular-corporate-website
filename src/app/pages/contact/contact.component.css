@@ -1,32 +1,52 @@
 .calculator form {
   max-width: 420px;   /* 👈 largeur visuelle comme le template */
-  margin: 0;
+  margin:0px;
 }
 .calculator input,
 .calculator select {
   width: 100%;              /* largeur = celle du form, pas de la colonne */
   height: 56px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(249, 246, 246, 0.977);
   border: none;
   border-radius: 6px;
   padding: 0 20px;
   font-size: 15px;
-  color: #ffffff;
+  color: #de1bd8;
   outline: none;
 }
+.calculator label{
+  color: aliceblue;
+}
+.calculator button{
+  align-content: center;
+}
 .calculator .col-lg-5 {
-  position: relative;
+
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+ justify-content: center; 
 
-  left: 720px;   /* ➡️ vers la droite */
-  top: -100px;    /* ⬆️ vers le haut */
 }
+/* FORCER carte + form sur la même ligne */
+@media (min-width: 992px) {
+  .contact-row {
+    display: flex;
+    flex-wrap: nowrap;     /* 🔥 LA SOLUTION */
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  .contact-row > .col-md-7,
+  .contact-row > .col-md-5 {
+    flex: 0 0 auto;
+  }
+}
+
 
 @media (min-width: 992px) {
   .calculator .col-lg-5 {
     padding-left: 40px;
+    margin-left: 180px;
   }
 }
 .calculator .left-image img {
@@ -43,6 +63,84 @@
   min-height: 580px;     /* ✅ au lieu de height */
   padding: 10px 0;
 }
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  padding: 40px;
+  border-radius: 12px;
+  color: #fff;
+  height: 100%;
+  
+  max-width: 480px;          /* 🔥 clé */
+}
+
+.contact-card h3 {
+  color: #ff6a00;
+  text-transform: uppercase;
+  font-weight: 1900;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style:oblique;
+  text-align: center;
+}
+
+.contact-card h4 {
+  font-size: 32px;
+  margin: 10px 0 20px;
+}
+
+.contact-card p {
+  max-width: 420px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-weight: 600;
+  
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #ff00ff;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #ff00ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.container h1{
+
+  text-align: center;
+  color: #ff6a00;
+
+
+}
+
 
 
 

@@ -1,22 +1,55 @@
 <section class="calculator" id="contact">
   <div class="container">
-    <div class="row">
+     <h1>Digitalisez vos Bussiness</h1>
+    <div class="row contact-row">
 
       <!-- IMAGE -->
-      <div class="col-lg-7">
-        <div class="left-image">
-          <img src="assets/images/calculator-image.png" alt="Contact illustration">
-        </div>
-      </div>
+     <div class="col-md-7 col-lg-7">
+  <div class="contact-card">
+
+    <h3>Contact Direct</h3>
+    <h4>Parlons de votre projet</h4>
+    <p>
+      Notre équipe vous répond sous 24h pour vous accompagner
+      dans vos projets digitaux.
+    </p>
+
+    <ul class="contact-info">
+      <li>
+        <span>📞</span>
+        <a href="tel:+221774813790">+221 77 481 37 90</a>
+      </li>
+      <li>
+        <span>📧</span>
+        <a href="mailto:contact&#64;magentatech.com">
+         contact&#64;magentatech.com
+        </a>
+
+      </li>
+      <li>
+        <span>📍</span>
+        Dakar, Sénégal
+      </li>
+    </ul>
+
+    <div class="social-links">
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" aria-label="WhatsApp">WhatsApp</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+    </div>
+
+  </div>
+</div>
+
 
       <!-- FORM -->
-      <div class="col-lg-5">
+      <div class="col-md-5 col-lg-5">
         <div class="section-heading">
-          <h6>Your Freedom</h6>
-          <h4>Get a Financial Plan</h4>
+         
+          <h4> Contactez-nous </h4>
         </div>
 
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
 
           <div class="row">
 
@@ -61,10 +94,10 @@
                   formControlName="reason"
                 >
                   <option value="">Choose an Option</option>
-                  <option value="Online Banking">Online Banking</option>
-                  <option value="Financial Control">Financial Control</option>
-                  <option value="Yearly Profit">Yearly Profit</option>
-                  <option value="Crypto Investment">Crypto Investment</option>
+                  <option value="Online Banking">Digitalisez</option>
+                  <option value="Financial Control"> Sama Tailleur</option>
+                  <option value="Yearly Profit"> Sama Appli </option>
+                 
                 </select>
               </fieldset>
             </div>

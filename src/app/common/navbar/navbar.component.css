@@ -5,6 +5,10 @@ HEADER TYPOGRAPHY
 .header-area {
   font-family: 'Poppins', sans-serif;
 }
+.header-area .container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
 /* LOGO */
 .header-area .logo img {
@@ -19,16 +23,31 @@ HEADER TYPOGRAPHY
   color: #FFFFFF;
   padding: 10px 18px;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;     /* 🔥 clé du centrage */
+  justify-content: center;
+  gap: 4px;
 }
 
 /* HOVER & ACTIVE */
 .header-area .main-nav .nav > li > a:hover {
   color: #d63384; /* magenta */
+ 
 }
 
 /* MENU DÉROULANT */
 .header-area .has-sub > a {
-  font-weight: 600;
+  font-weight: 700;
+  gap: 6px;
+  display: flex;
+  align-items: center;  
+}
+
+.header-area .has-sub > a::after {
+  font-size: 12px;
+  margin-left: 6px;
+  position: relative;
+  transform: translateY(1px); /* micro-ajustement propre */
 }
 
 .header-area .sub-menu {
@@ -65,11 +84,19 @@ HEADER TYPOGRAPHY
   background: #b82d6f;
 }
 
-/* HEADER STICKY */
-.header-area.background-header {
+
+
+.header-area.light-navbar {
   background: #ffffff;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
+
+.header-area.light-navbar .main-nav .nav > li > a {
+  color: #111;
+}
+
+
+
 
 /* MOBILE MENU */
 @media (max-width: 991px) {
@@ -87,3 +114,54 @@ HEADER TYPOGRAPHY
     margin-top: 15px;
   }
 }
+
+
+@media (min-width: 992px) {
+  .header-area .main-nav .nav {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: auto !important;
+    transform: none !important;
+  }
+}
+@media (max-width: 991px) {
+  .header-area .main-nav .nav {
+    display: none;
+    flex-direction: column;
+  }
+
+  .header-area .main-nav .nav.active {
+    display: block;
+  }
+}
+
+/* =========================
+FIX COULEUR TEXTE NAVBAR
+========================= */
+
+/* Header clair */
+.header-area.background-header,
+.header-area.light-navbar {
+  background: #ffffff;
+}
+
+/* 🔥 FORCER TEXTE NOIR */
+.header-area.background-header .main-nav .nav > li > a,
+.header-area.light-navbar .main-nav .nav > li > a {
+  color: #111 !important;
+}
+
+/* Hover reste magenta */
+.header-area.background-header .main-nav .nav > li > a:hover,
+.header-area.light-navbar .main-nav .nav > li > a:hover {
+  color: #d63384 !important;
+}
+/* 🔥 TEXTE NOIR / MAGENTA SUR HEADER BLANC */
+.header-area.background-header .main-nav .nav > li > a {
+  color: #FF00FF;
+}
+
+
+
+

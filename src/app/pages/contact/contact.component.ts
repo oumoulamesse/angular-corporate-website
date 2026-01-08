@@ -21,15 +21,32 @@ export class ContactComponent {
       reason: ['', Validators.required]
     });
   }
+onSubmit(): void {
+  if (this.contactForm.invalid) return;
 
-  onSubmit(): void {
-    if (this.contactForm.valid) {
-      console.log('Form Data:', this.contactForm.value);
+  const formData = new URLSearchParams();
+  formData.append('name', this.contactForm.value.name);
+  formData.append('email', this.contactForm.value.email);
+  formData.append('subject', this.contactForm.value.subject || 'Nouveau message');
+  formData.append('message', this.contactForm.value.reason);
 
-      // PLUS TARD :
-      // envoyer vers une API / Email / Firebase / Backend
-
+  fetch('https://formspree.io/f/mvgrprja', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: formData.toString()
+  })
+  .then(res => {
+    if (res.ok) {
+      alert('Message envoyé avec succès ✅');
       this.contactForm.reset();
+    } else {
+      alert('Erreur Formspree ❌');
     }
-  }
-}
+  })
+  .catch(() => {
+    alert('Problème réseau ❌');
+  });
+}}

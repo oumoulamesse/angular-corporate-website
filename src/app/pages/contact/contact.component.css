@@ -1,3 +1,29 @@
+button.cta {
+  background: #FF00FF;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 12px 25px rgba(255, 0, 255, 0.25);
+}
+
+button.cta:hover:enabled {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(255, 0, 255, 0.35);
+}
+
+/* Quand le formulaire est invalide */
+button.cta:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+
 .calculator form {
   max-width: 420px;   /* 👈 largeur visuelle comme le template */
   margin:0px;
@@ -76,7 +102,7 @@
 }
 
 .contact-card h3 {
-  color: #ff6a00;
+  color: #ff00ff;
   text-transform: uppercase;
   font-weight: 1900;
   letter-spacing: 1px;
@@ -136,7 +162,7 @@
 .container h1{
 
   text-align: center;
-  color: #ff6a00;
+  color: #ff00ff;
 
 
 }

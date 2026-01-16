@@ -31,7 +31,7 @@ HEADER TYPOGRAPHY
 
 /* HOVER & ACTIVE */
 .header-area .main-nav .nav > li > a:hover {
-  color: #d63384; /* magenta */
+  color: #ff00ff; /* magenta */
  
 }
 
@@ -66,12 +66,12 @@ HEADER TYPOGRAPHY
 }
 
 .header-area .sub-menu li a:hover {
-  color: #d63384;
+  color: #ff00ff;
 }
 
 /* BOUTON CONTACT SUPPORT */
 .header-area .contact-btn {
-  background: #d63384;
+  background: #ff00ff;
   color: #fff !important;
   padding: 12px 22px;
   border-radius: 30px;
@@ -81,7 +81,7 @@ HEADER TYPOGRAPHY
 }
 
 .header-area .contact-btn:hover {
-  background: #b82d6f;
+  background: #ff00ff;
 }
 
 
@@ -155,7 +155,7 @@ FIX COULEUR TEXTE NAVBAR
 /* Hover reste magenta */
 .header-area.background-header .main-nav .nav > li > a:hover,
 .header-area.light-navbar .main-nav .nav > li > a:hover {
-  color: #d63384 !important;
+  color: #ff00ff !important;
 }
 /* 🔥 TEXTE NOIR / MAGENTA SUR HEADER BLANC */
 .header-area.background-header .main-nav .nav > li > a {

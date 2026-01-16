@@ -1,4 +1,11 @@
+<header
+  class="header-area header-sticky"
+  [class.background-header]="isSticky"
+  [class.light-navbar]="isLightPage"
+>
+
 <!-- ***** Header Area Start ***** -->
+
 <header
   class="header-area header-sticky"
   [class.background-header]="isSticky">
@@ -17,11 +24,11 @@
           <ul class="nav" [class.active]="menuOpen">
 
             <li class="scroll-to-section">
-              <a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Acceuil</a>
+              <a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a>
             </li>
 
             <li class="scroll-to-section">
-              <a routerLink="/services" routerLinkActive="active" (click)="closeMenu()">solutions</a>
+              <a routerLink="/solutions" routerLinkActive="active" (click)="closeMenu()">solutions</a>
             </li>
 
             <li class="scroll-to-section">
@@ -33,10 +40,10 @@
               <a href="javascript:void(0)" (click)="togglePages()">Services</a>
 
               <ul class="sub-menu">
-                <li><a routerLink="/about-us" (click)="closeMenu()"> Développement Web </a></li>
-                <li><a routerLink="/our-services" (click)="closeMenu()"> Solutions IT & Réseaux </a></li>
+                <li><a routerLink="/services/web" (click)="closeMenu()"> Développement Web </a></li>
+                <li><a routerLink="/services/coaching" (click)="closeMenu()"> Coaching  </a></li>
                 <li><a routerLink="/contact" (click)="closeMenu()"> Cloud & Déploiement </a></li>
-                <li><a routerLink="/contact" (click)="closeMenu()"> Support & Maintenance </a></li>
+               
               </ul>
             </li>
 

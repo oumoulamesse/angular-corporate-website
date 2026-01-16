@@ -8,13 +8,13 @@ import { HeroComponent } from '../hero/hero.component';
 import { ServicesComponent } from '../services/services.component';
 import { TestimonialComponent } from '../testimonial/testimonial.component';
 import { ContactComponent } from '../contact/contact.component';
+import { PatnersComponent } from "../patners/patners.component";
 
 @Component({
   selector: 'app-home',
   standalone:true,
-  imports: [ NavbarComponent, FooterComponent,AboutComponent,
-    HeroComponent,ServicesComponent,TestimonialComponent,ContactComponent
-  ],
+  imports: [NavbarComponent, AboutComponent,
+    HeroComponent, ServicesComponent, TestimonialComponent, ContactComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -56,3 +56,19 @@
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(6px);
 }
+.cta a {
+  display: inline-block;
+  background: #FF00FF;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 12px 25px rgba(255, 0, 255, 0.25);
+}
+
+.cta a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(255, 0, 255, 0.35);
+}

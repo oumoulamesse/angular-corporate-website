@@ -5,6 +5,15 @@
 .solutions-section {
   padding: 80px 0;
   background: #f8f9fb;
+
+  /* ✅ CORRECTION IMPORTANT : section au-dessus des overlays (swiper/hero) */
+  position: relative;
+  z-index: 50;
+}
+
+/* ✅ CORRECTION : tout le contenu solutions doit être cliquable */
+.solutions-section * {
+  pointer-events: auto;
 }
 
 .solutions-grid {
@@ -14,6 +23,7 @@
   margin-top: 30px;
 }
 
+/* ✅ Card */
 .solution-card {
   background: #fff;
   border-radius: 20px;
@@ -21,23 +31,28 @@
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.06);
   transition: 0.25s;
+
+  /* ✅ CORRECTION: pour gérer les z-index correctement */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* ✅ CORRECTION : si un overlay/pseudo-element existe, il ne doit jamais bloquer le clic */
+.solution-card::before,
+.solution-card::after {
+  pointer-events: none !important;
 }
 
 .solution-card:hover {
   transform: translateY(-7px);
-}
-
-.solution-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.06);
-  transition: 0.25s;
+  border: 2px solid rgba(255, 0, 255, 0.40);
+  box-shadow: 0 25px 55px rgba(255, 0, 255, 0.14);
 }
 
 /*=============*/
 
+/* ✅ CTA button magenta */
 .contact-btn {
   display: inline-block;
   background: #FF00FF;
@@ -48,6 +63,11 @@
   font-size: 14px;
   text-decoration: none;
   transition: 0.3s;
+  cursor: pointer;
+
+  /* ✅ CORRECTION */
+  position: relative;
+  z-index: 999;
 }
 
 .contact-btn:hover {
@@ -59,15 +79,7 @@
   transform: translateY(0px);
 }
 
-
-/* Hover premium : cadre magenta + glow */
-.solution-card:hover {
-  transform: translateY(-7px);
-  border: 2px solid rgba(255, 0, 255, 0.40);
-  box-shadow: 0 25px 55px rgba(255, 0, 255, 0.14);
-}
-
-
+/* Texte / contenu */
 .solution-top {
   margin-bottom: 12px;
 }
@@ -109,14 +121,20 @@
   opacity: 0.9;
 }
 
+/* Footer */
 .solution-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
+
+  /* ✅ CORRECTION */
+  position: relative;
+  z-index: 10;
 }
 
+/* ✅ Bouton démo cliquable garanti */
 .solution-btn {
   display: inline-block;
   padding: 10px 16px;
@@ -128,6 +146,12 @@
   font-size: 13px;
   transition: 0.25s;
   box-shadow: 0 12px 25px rgba(255, 0, 255, 0.20);
+  cursor: pointer;
+
+  /* ✅ CORRECTION */
+  position: relative;
+  z-index: 999;
+  pointer-events: auto !important;
 }
 
 .solution-btn:hover {
@@ -151,6 +175,10 @@
   padding: 26px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.06);
+
+  /* ✅ CORRECTION */
+  position: relative;
+  z-index: 10;
 }
 
 .process-title {
@@ -206,7 +234,7 @@
   line-height: 1.5;
 }
 
-/* CTA */
+/* CTA bloc */
 .solutions-cta {
   margin-top: 22px;
   display: flex;
@@ -217,6 +245,10 @@
   background: linear-gradient(135deg, rgba(255,0,255,0.12), rgba(3,164,237,0.10));
   border-radius: 18px;
   padding: 18px;
+
+  /* ✅ CORRECTION */
+  position: relative;
+  z-index: 999;
 }
 
 .solutions-cta h4 {

@@ -3,13 +3,6 @@
   [class.background-header]="isSticky"
   [class.light-navbar]="isLightPage"
 >
-
-<!-- ***** Header Area Start ***** -->
-
-<header
-  class="header-area header-sticky"
-  [class.background-header]="isSticky">
-
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -28,26 +21,27 @@
             </li>
 
             <li class="scroll-to-section">
-              <a routerLink="/solutions" routerLinkActive="active" (click)="closeMenu()">solutions</a>
+              <a routerLink="/solutions" routerLinkActive="active" (click)="closeMenu()">Solutions</a>
             </li>
 
             <li class="scroll-to-section">
               <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
             </li>
 
-            <!-- Pages Dropdown -->
-            <li class="has-sub" [class.open]="pagesOpen">
-              <a href="javascript:void(0)" (click)="togglePages()">Services</a>
+            <!-- Dropdown Services -->
+            <li class="submenu" [class.open]="servicesOpen">
+              <a href="#" (click)="onServicesClick($event)">
+                Services <span class="arrow">▾</span>
+              </a>
 
               <ul class="sub-menu">
-                <li><a routerLink="/services/web" (click)="closeMenu()"> Développement Web </a></li>
-                <li><a routerLink="/services/coaching" (click)="closeMenu()"> Coaching  </a></li>
-                <li><a routerLink="/contact" (click)="closeMenu()"> Cloud & Déploiement </a></li>
+                <li><a routerLink="/services/web" (click)="closeMenu()">Développement Web</a></li>
+                <li><a routerLinkActive="active-sub" routerLink="/services/coaching" (click)="closeMenu()">Coaching</a></li>
                
               </ul>
             </li>
 
-             <li class="scroll-to-section">  
+            <li class="scroll-to-section">
               <a routerLink="/contact" (click)="closeMenu()">Contact</a>
             </li>
 
@@ -60,10 +54,7 @@
           </ul>
 
           <!-- Mobile Menu Button -->
-          <a
-            class="menu-trigger"
-            [class.active]="menuOpen"
-            (click)="toggleMenu()">
+          <a class="menu-trigger" [class.active]="menuOpen" (click)="toggleMenu()">
             <span>Menu</span>
           </a>
 
@@ -72,4 +63,3 @@
     </div>
   </div>
 </header>
-<!-- ***** Header Area End ***** -->

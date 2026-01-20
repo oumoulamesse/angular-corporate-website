@@ -63,11 +63,14 @@ HEADER TYPOGRAPHY
   font-weight: 500;
   color: #333;
   padding: 10px 20px;
+   background: transparent !important;
 }
 
 .header-area .sub-menu li a:hover {
   color: #ff00ff;
 }
+
+
 
 /* BOUTON CONTACT SUPPORT */
 .header-area .contact-btn {
@@ -95,14 +98,11 @@ HEADER TYPOGRAPHY
   color: #111;
 }
 
-
-
-
 /* MOBILE MENU */
 @media (max-width: 991px) {
   .header-area .main-nav .nav > li > a {
-    font-size: 18px;     /* 🔥 lisible mobile */
-    padding: 14px 0;
+    font-size: 14px;     /* 🔥 lisible mobile */
+    padding: 10px 0;
   }
 
   .header-area .sub-menu li a {
@@ -163,5 +163,38 @@ FIX COULEUR TEXTE NAVBAR
 }
 
 
+/* ✅ Desktop : hover affiche submenu */
+@media (min-width: 993px) {
+  .submenu .sub-menu {
+    display: none;
+    position: absolute;
+  }
+
+  .submenu:hover .sub-menu {
+    display: block;
+  }
+}
+
+/* ✅ Mobile : submenu caché, et s’ouvre par class .open */
+@media (max-width: 992px) {
+  .submenu .sub-menu {
+    display: none;
+    position: relative;
+  }
+
+  .submenu.open .sub-menu {
+    display: block;
+  }
+}
+
+/* Arrow rotate */
+.submenu .arrow {
+  margin-left: 6px;
+  transition: 0.3s;
+}
+
+.submenu.open .arrow {
+  transform: rotate(180deg);
+}
 
 

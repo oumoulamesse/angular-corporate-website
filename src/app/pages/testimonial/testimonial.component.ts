@@ -19,19 +19,19 @@ export class TestimonialComponent implements AfterViewInit , OnDestroy {
       quote: "This is the best no-code platform I've ever seen",
       name: 'Alyssa Morris',
       role: 'Product Manager, Intel',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956'
+      image: 'assets/images/testimonial1.jpg'
     },
     {
       quote: 'The perfect organizer and team builder',
       name: 'Randall Howard',
       role: 'UX Designer, Netflix',
-      image: 'https://images.unsplash.com/photo-1504199367641-aba8151af406'
+      image: 'assets/images/testimonial4.jpg'
     },
     {
       quote: 'Flexible product with near endless possibilities',
       name: 'Adam Worrell',
       role: 'Data Analyst, Spotify',
-      image: 'https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0'
+      image: 'assets/images/testimonial3.jpg'
     }
   ];
   autoplayInterval: any;

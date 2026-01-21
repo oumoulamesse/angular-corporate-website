@@ -1,0 +1,10 @@
+.magentaTech{
+  color: #ff00ff; /* magenta */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.magentaTech:hover{
+  color: #d100d1; /* magenta un peu plus foncé */
+  text-decoration: underline;
+}

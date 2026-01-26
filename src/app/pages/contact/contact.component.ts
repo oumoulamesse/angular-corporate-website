@@ -28,9 +28,9 @@ onSubmit(): void {
   formData.append('name', this.contactForm.value.name);
   formData.append('email', this.contactForm.value.email);
   formData.append('subject', this.contactForm.value.subject || 'Nouveau message');
-  formData.append('message', this.contactForm.value.reason);
+  formData.append('reason', this.contactForm.value.reason);
 
-  fetch('https://formspree.io/f/mvgrprja', {
+  fetch('https://formspree.io/f/mvzarzgy', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

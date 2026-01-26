@@ -17,7 +17,7 @@ export class TestimonialComponent implements AfterViewInit , OnDestroy {
   testimonials = [
     {
       quote: "This is the best no-code platform I've ever seen",
-      name: 'Alyssa Morris',
+      name: 'Alioune Sow',
       role: 'Product Manager, Intel',
       image: 'assets/images/testimonial1.jpg'
     },
